@@ -1,0 +1,271 @@
+:root {
+    --default-green: #1db954;
+    --light-green: #1ed760;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Reutilizar essa classe em outras páginas (Estilizando o botão) */
+.btn-primary {
+    background: var(--default-green);
+    color: white;
+
+    /*Para o texto ficar maiúsculo*/
+    text-transform: uppercase;
+
+    padding: 15px 55px;
+    border: none;
+    border-radius: 30px;
+
+    /*Dar espaçamento entre as letras*/
+    letter-spacing: 1px;
+
+    /*Deixar as letras maiúsculas*/
+    font-weight: bold;
+    transition: all 200ms ease;
+}
+
+.btn-primary:hover {
+    background: var(--light-green);
+    cursor: pointer;
+}
+
+/* Classe logo */
+.logo {
+    width: auto;
+    height: 40px;
+}
+
+/* Navbar quadrado de cima */
+#navbar {
+    display: flex;
+    background-color: rgba(0,0,0,0.6);
+
+    /*Nome das opções em branco*/
+    color: white;
+
+    /*Container da logo e das opções ficarem no meio*/
+    justify-content: center;
+
+    /*Agora colocamos a navbar fixa no topo, com a width 100% para o quadrado preencher toda a tela*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar .navbar-container {
+    width: 60%;
+    /*Logo do spotfy ficar do lado das opções, ou seja, deixa os elementos dentro de um só container*/
+    display: flex;
+
+    /*Logo do spotfy ficar no centro do quadrado de cima*/
+    align-items: center;
+
+    /*Dar espaçamento entre a logo do spotfy e as opções*/
+    justify-content: space-between;
+
+    /*Dar uma distância entre os elementos e suas bordas, no caso, aumentar o tamanho do body, mais especificamente a navbar, o quadrado de cima*/
+    padding: 20px 0;
+}
+
+#navbar .navbar-container ul {
+
+    /*/*Deixa os elementos dentro de um só container*/
+    display: flex;
+
+    /*Tirar as bolinhas do lado do nome da lista*/
+    list-style: none;
+
+    /*Deixar a fonte da lista em negrito*/
+    font-weight: bold;
+}
+
+#navbar .navbar-container ul li {
+
+    /*Dar uma distância entre os nomes da lista*/
+    padding: 0 20px;
+    transition: all 200ms ease;
+}
+
+#navbar .navbar-container ul li:hover {
+    color: #1db954;
+    cursor: pointer;
+}
+
+#navbar .navbar-container ul li:nth-child(3) {
+
+    /*Nesse comando, pegamos o item 3 da lista, no caso o baixar, e colocamos uma borda na direita para fazer o traço*/
+    border-right: 1px solid white;
+}
+
+#showcase {
+    /*Deixa os elementos no inicio, meio ou fim da tela verticalmente*/
+    height: 100vh;
+
+    /*Deixa os elementos dentro de um só container*/
+    display: flex;
+    
+    /*Controla o alinhamento de todos os itens no eixo principal, ou seja, no meio  da tela horizontalmente*/
+    justify-content: center;
+    align-items: center;
+
+    /*Deixar o texto branco*/
+    color: white;
+
+    /*Deixar a imagem no fundo e centralizada perfeitamente*/
+    background: url("../assets/images/showcase.webp") center center/cover;
+
+    /*Dar uma escurecida na imagem*/
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: color;
+}
+
+#showcase .showcase-container {
+    /*Deixa os elementos dentro de um só container*/
+    display: flex;
+
+    /*Deixa os do display: flex; dentro de uma coluna, para ficar em colunas organizados*/
+    flex-direction: column;
+
+    /*Deixa os elementos no centro*/
+    align-items: center;
+}
+
+#showcase .showcase-container h2 {
+    
+    /*Aumentando o tamanho da fonte do h2*/
+    font-size: 5rem;
+}
+
+#showcase .showcase-container p {
+    
+    /*Aumentando a margem do h2, abrindo mais os espaços entre os elementos*/
+    margin: 15px 0;
+
+    /*Aumentando a fonte do h2*/
+    font-size: 1.1rem;
+}
+
+/*Footer (quadrado preto em baixo do site)*/
+
+#footer {
+    background: black;
+    color:white;
+    padding: 80px 0;
+}
+
+#footer .footer-content {
+    /*Deixa os elementos dentro de um só container*/
+    display: flex;
+
+    /*Deixar o container no meio da tela*/
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#footer .footer-content .footer-menu {
+
+    /*Dar uma distância entre os tópicos da lista desse container*/
+    margin: 0 60px;
+    list-style: none;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item {
+    margin: 25px 0;
+    transition: all 200ms ease;
+}
+#footer .footer-content .footer-menu .footer-menu-item:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+#footer .footer-content .footer-menu p {
+
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #919496;
+    font-size: 0.rem;
+}
+
+/*  Footer Socials  */
+.socials {
+    display: flex;
+}
+
+.socials i {
+    margin: 0 20px;
+    font-size: 1.7rem;
+    transition: all 200ms ease;
+}
+
+.socials i:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+/*   Footer Info   */
+.footer-info {
+    display: flex;
+
+    /*Distânciar os elementos por igual, ocupar os espaços livres*/
+    justify-content: space-between;
+
+    /*Alinahr os itens no fim do container*/
+    align-items: flex-end;
+
+    /*Deixar a lista no meio*/
+    width: 60%;
+    margin: auto;
+
+    font-weight: bold;
+    color: #919496;
+    font-size: 0.75rem;
+
+    padding-top: 50px;
+}
+
+.footer-info .footer-info-items {
+    display: flex;
+    list-style: none;
+}
+.footer-info .footer-info-items .footer-info-item {
+    margin: 0 10px;
+    transition: all 200ms ease;
+}
+
+.footer-info .footer-info-items .footer-info-item:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+.footer-info .rights .country {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-info .rights .country p:hover {
+    transition: all 200ms ease;
+}
+
+.footer-info .rights .country p:hover {
+    color: var(--default-green);
+    cursor: pointer;
+}
+
+.footer-info .rights .country .brazil-flag {
+    height: 20px;
+    width: auto;
+    display: inline-block;
+    margin-left: 10px;
+}
